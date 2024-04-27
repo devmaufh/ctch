@@ -20,9 +20,9 @@ class DocumentsFactory extends Factory
     {
         return [
             //
-            'id' => random_int(1,500),
-            'student_id' => random_int(1,200),
-            'document_type_id' => random_int(1,100),
+            'id' => random_int(1,50),
+            'student_id' => random_int(51,100),
+            'document_type_id' => random_int(101,150),
             'Creation_date' => date_create(),
             'path' => $this->faker->randomElement(['Pdf','Jpg','png'])
 

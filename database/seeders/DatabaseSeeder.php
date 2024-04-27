@@ -19,9 +19,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
         //$this->call(DocumentsSeeder::class);
-        documents::factory(50)->create();
+        
+        documents::factory(20)->create();
 
 
     }
