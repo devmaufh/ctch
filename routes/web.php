@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 */
+Route::get('document-types', [DocumentTypeController::class, 'index']);
+// Route::post();
+// Route::patch();
+// Route::put();
+// Route::delete();
+Route::get('document-types/{id}',[DocumentTypeController::class, 'show']);
 
 Route::get('document-type', [DocumentTypeController::class, 'index'])->name('document-type.index');
 Route::get('document-type/create', [DocumentTypeController::class, 'create'])->name('document-type.create');
