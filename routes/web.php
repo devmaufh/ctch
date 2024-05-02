@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('document-types', [DocumentTypeController::class, 'index']);
+// Route::post();
+// Route::patch();
+// Route::put();
+// Route::delete();
+Route::get('document-types/{id}',[DocumentTypeController::class, 'show']);
 
 Route::view('/', 'welcome');
 
