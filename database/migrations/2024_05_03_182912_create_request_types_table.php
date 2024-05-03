@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('code')->unique()->index();
             $table->integer('expiration')->nullable();
+            $table->unsignedBigInteger('area_type_id');
+            $table->foreign('area_type_id')->references('id')->on('area_types');
             $table->timestamps();
+
 
         });
     }

@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class RequestType extends Model
 {
-    use HasFactory;
+   // use HasFactory;
+
+
+    public function areaTypes()
+    {
+        return $this->belongsToMany(AreaType::class);
+    }
 }
