@@ -16,10 +16,18 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class RequestType extends Model
 {
-    public function areaType():BelongsTo
+//    use HasFactory;
+
+    /**
+     * Returns the area type relation.
+     *
+     * @return BelongsTo
+     */
+    public function areaType(): BelongsTo
     {
         return $this->belongsTo(AreaType::class);
 
     }
+
 }
 

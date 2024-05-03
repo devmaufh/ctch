@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('document_types', function (Blueprint $table) {
-            //
+        Schema::table('area_types', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -21,8 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('document_types', function (Blueprint $table) {
-            //
+        Schema::table('area_types', function (Blueprint $table) {
+            $table->dropColumn('user_id');
         });
     }
 };
