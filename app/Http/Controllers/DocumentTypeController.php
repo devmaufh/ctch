@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AreaType;
 use Illuminate\Http\Request;
-use TijsVerkoyen\CssToInlineStyles\Css\Rule\Rule;
+
 
 class DocumentTypeController extends Controller
 {

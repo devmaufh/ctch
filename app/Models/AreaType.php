@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
+ * returns the request type relation
  * @property int $id
  * @property string $name
  * @property string $code
@@ -16,4 +17,13 @@ class AreaType extends Model
     protected $table = 'area_types';
     //protected $fillable = ['name', 'code', 'id_usuario'];
     use HasFactory;
+
+    public function requestTypes(): HasMany{
+        return $this->hasMany(RequestType::class);
+
+    }
+
+    public function user(): BelongsTo{
+        return $this->belongsTo(User::class);
+    }
 }
