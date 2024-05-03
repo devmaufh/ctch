@@ -42,4 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * @return HasMany
+     */
+    public function areaTypes():HasMany
+    {
+        return $this->hasMany(AreaType::class);
+
+    }
 }
