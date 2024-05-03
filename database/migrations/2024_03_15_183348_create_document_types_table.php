@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('area_types', function (Blueprint $table) {
+        Schema::create('document_types', function (Blueprint $table) {
             $table->id();
             $table->string('name')->index();
-            $table->string('code')->unique()->index();
+            $table->integer('expiration')->nullable();//nulo
+            $table->string('code')->unique()->index();//unico
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('area_types');
+        Schema::dropIfExists('document_types');
     }
 };
