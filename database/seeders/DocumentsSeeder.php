@@ -14,7 +14,7 @@ class DocumentsSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        //------------------------
 
        // $documents = new documents();
 
@@ -27,6 +27,6 @@ class DocumentsSeeder extends Seeder
        // $documents->save();
 
 
-       documents::factory(5)->create();
+       documents::factory(100)->create();
     }
 }
