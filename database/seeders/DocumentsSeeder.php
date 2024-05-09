@@ -14,19 +14,19 @@ class DocumentsSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        //------------------------
 
-       // $documents = new documents();
+        // $documents = new documents();
 
-       // $documents->id ='123456';
-       // $documents->student_id ='098765';
-       // $documents->document_type_id ='67890';
-       // $documents->Creation_date ='2000-01-01';
-       // $documents->path ='pdf';
+        // $documents->id ='123456';
+        // $documents->student_id ='098765';
+        // $documents->document_type_id ='67890';
+        // $documents->Creation_date ='2000-01-01';
+        // $documents->path ='pdf';
 
-       // $documents->save();
+        // $documents->save();
 
 
-       documents::factory(5)->create();
+        documents::factory(100)->create();
     }
 }
