@@ -40,6 +40,7 @@ new class extends Component
         }
 
         $user->save();
+        \App\Jobs\SendUpdateNotification::dispatch($user);
 
         $this->dispatch('profile-updated', name: $user->name);
     }
