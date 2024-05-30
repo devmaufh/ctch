@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('document_types', function (Blueprint $table) {
-            //
+        Schema::create('feedback', function (Blueprint $table) {
+            $table->id();
+            $table->integer('request_log_id');
+            $table->integer('user_id');
+            $table->datetime('creation_date');
+            $table->string('commit');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('document_types', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('feedback');
     }
 };

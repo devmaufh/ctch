@@ -45,15 +45,12 @@ class User extends Authenticatable
     ];
 
     /**
-     * Return the relation of area types
+     * Return the relation of area types.
      *
      * @return HasMany
      */
-    public function areaTypes():HasMany
-
+    public function areaTypes(): HasMany
     {
         return $this->hasMany(AreaType::class);
     }
-
-
 }

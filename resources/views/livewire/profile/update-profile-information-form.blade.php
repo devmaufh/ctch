@@ -35,11 +35,13 @@ new class extends Component
 
         $user->fill($validated);
 
-        if ($user->isDirty('email')) {
+        if ($user->isDirty('email')) { //isDirty por si hay cambios
             $user->email_verified_at = null;
         }
 
         $user->save();
+
+        \App\Jobs\SendUpdateNotification::dispatch($user);
 
         $this->dispatch('profile-updated', name: $user->name);
     }

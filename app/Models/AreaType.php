@@ -4,8 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @property int $id
@@ -16,27 +14,27 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class AreaType extends Model
 {
     protected $table = 'area_types';
-    //protected $fillable = ['name', 'code', 'id_usuario'];
+    protected $fillable = ['name', 'code', 'id_usuario'];
     use HasFactory;
 
     /**
-     * Returns the request types relation
+     * Returns the request types relation.
      *
      * @return HasMany
      */
-    public function requestTypes():HasMany
+    public function requestTypes(): HasMany
     {
         return $this->hasMany(RequestType::class);
     }
 
     /**
-     * Returns the relation of user
+     * Return the user relation.
      *
      * @return BelongsTo
      */
-    public function user():BelongsTo
-
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
+
 }

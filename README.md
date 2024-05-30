@@ -43,3 +43,6 @@ npm run dev
 ```bash
 php artisan serve
 ```
+
+## Avatar API
+[https://ui-avatars.com/](https://ui-avatars.com/)
